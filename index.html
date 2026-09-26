@@ -1,0 +1,596 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="MS KITCHEN WARES LTD — quality kitchenware and home essentials.">
+<title>MS KITCHEN WARES LTD</title>
+
+<style>
+:root {
+  --dark: #171513;
+  --gold: #c59a52;
+  --cream: #f7f2e9;
+  --white: #ffffff;
+  --muted: #6e675e;
+  --line: #e7dfd3;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  color: var(--dark);
+  background: var(--cream);
+  line-height: 1.6;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* HEADER */
+header {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  background: rgba(255,255,255,.96);
+  border-bottom: 1px solid var(--line);
+}
+
+.nav {
+  max-width: 1150px;
+  margin: auto;
+  padding: 18px 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo {
+  font-size: 20px;
+  font-weight: 800;
+  letter-spacing: 1px;
+}
+
+.logo span {
+  color: var(--gold);
+}
+
+nav {
+  display: flex;
+  gap: 25px;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+nav a:hover {
+  color: var(--gold);
+}
+
+/* HERO */
+.hero {
+  min-height: 620px;
+  display: flex;
+  align-items: center;
+  background:
+    linear-gradient(
+      90deg,
+      rgba(23,21,19,.92),
+      rgba(23,21,19,.62),
+      rgba(23,21,19,.15)
+    ),
+    linear-gradient(135deg,#4c3c2c,#c59a52);
+  color: white;
+}
+
+.hero-inner {
+  max-width: 1150px;
+  width: 100%;
+  margin: auto;
+  padding: 90px 24px;
+}
+
+.eyebrow {
+  color: #e5c98e;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  font-size: 13px;
+  font-weight: 700;
+  margin-bottom: 18px;
+}
+
+h1 {
+  font-size: clamp(42px,7vw,76px);
+  line-height: 1.02;
+  max-width: 780px;
+  margin-bottom: 24px;
+}
+
+.hero p {
+  font-size: 19px;
+  max-width: 620px;
+  color: #f5eee5;
+  margin-bottom: 34px;
+}
+
+.btn {
+  display: inline-block;
+  background: var(--gold);
+  color: white;
+  padding: 14px 24px;
+  border-radius: 4px;
+  font-weight: 700;
+  margin-right: 10px;
+}
+
+.btn.secondary {
+  background: transparent;
+  border: 1px solid rgba(255,255,255,.65);
+}
+
+/* SECTIONS */
+section {
+  padding: 80px 24px;
+}
+
+.container {
+  max-width: 1150px;
+  margin: auto;
+}
+
+.section-head {
+  text-align: center;
+  max-width: 700px;
+  margin: 0 auto 45px;
+}
+
+.section-head h2 {
+  font-size: 38px;
+  margin-bottom: 12px;
+}
+
+.section-head p {
+  color: var(--muted);
+}
+
+/* PRODUCT CARDS */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+  gap: 22px;
+}
+
+.card {
+  background: white;
+  border: 1px solid var(--line);
+  padding: 30px;
+  border-radius: 8px;
+  transition: .2s;
+}
+
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 30px rgba(0,0,0,.08);
+}
+
+.icon {
+  font-size: 38px;
+  margin-bottom: 18px;
+}
+
+.card h3 {
+  font-size: 21px;
+  margin-bottom: 9px;
+}
+
+.card p {
+  color: var(--muted);
+}
+
+/* ABOUT */
+.about {
+  background: white;
+}
+
+.about-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  align-items: center;
+}
+
+.about-box {
+  background: var(--dark);
+  color: white;
+  border-radius: 8px;
+  padding: 45px;
+}
+
+.about-box .big {
+  font-size: 58px;
+  color: var(--gold);
+  font-weight: 800;
+  line-height: 1;
+}
+
+.about-text h2 {
+  font-size: 40px;
+  margin-bottom: 18px;
+}
+
+.about-text p {
+  color: var(--muted);
+  margin-bottom: 18px;
+}
+
+.features {
+  display: grid;
+  grid-template-columns: repeat(2,1fr);
+  gap: 14px;
+  margin-top: 25px;
+}
+
+.feature {
+  border-top: 1px solid var(--line);
+  padding-top: 13px;
+  font-weight: 600;
+}
+
+/* CONTACT */
+.cta {
+  background: var(--dark);
+  color: white;
+  text-align: center;
+}
+
+.cta h2 {
+  font-size: 42px;
+  margin-bottom: 15px;
+}
+
+.cta p {
+  color: #d9d0c4;
+  max-width: 620px;
+  margin: 0 auto 28px;
+}
+
+/* FOOTER */
+footer {
+  background: #0f0e0d;
+  color: #cfc6ba;
+  padding: 28px 24px;
+}
+
+.footer-inner {
+  max-width: 1150px;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  align-items: center;
+}
+
+.email {
+  color: #e1bd79;
+}
+
+/* MOBILE */
+@media (max-width:760px) {
+
+  nav {
+    display: none;
+  }
+
+  .hero {
+    min-height: 560px;
+  }
+
+  .grid,
+  .about-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .features {
+    grid-template-columns: 1fr;
+  }
+
+  section {
+    padding: 62px 20px;
+  }
+
+  .about-box {
+    padding: 32px;
+  }
+
+  .footer-inner {
+    flex-direction: column;
+    text-align: center;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<!-- HEADER -->
+<header>
+  <div class="nav">
+
+    <a class="logo" href="#home">
+      MS <span>KITCHEN WARES LTD</span>
+    </a>
+
+    <nav>
+      <a href="#home">Home</a>
+      <a href="#collections">Collections</a>
+      <a href="#about">About</a>
+      <a href="#contact">Contact</a>
+    </nav>
+
+  </div>
+</header>
+
+
+<main>
+
+<!-- HERO SECTION -->
+<section class="hero" id="home">
+
+  <div class="hero-inner">
+
+    <div class="eyebrow">
+      Kitchen • Home • Quality
+    </div>
+
+    <h1>
+      Beautiful kitchenware for everyday living.
+    </h1>
+
+    <p>
+      Discover practical, stylish and reliable kitchen essentials
+      from MS KITCHEN WARES LTD — made to bring convenience and
+      a touch of elegance to every kitchen.
+    </p>
+
+    <a class="btn" href="#collections">
+      Explore Collections
+    </a>
+
+    <a class="btn secondary" href="#contact">
+      Contact Us
+    </a>
+
+  </div>
+
+</section>
+
+
+<!-- COLLECTIONS -->
+<section id="collections">
+
+  <div class="container">
+
+    <div class="section-head">
+
+      <h2>Our Collections</h2>
+
+      <p>
+        Explore a versatile range of kitchen and home essentials
+        designed for everyday use.
+      </p>
+
+    </div>
+
+
+    <div class="grid">
+
+      <article class="card">
+        <div class="icon">🍳</div>
+
+        <h3>Cookware</h3>
+
+        <p>
+          Practical cookware for preparing delicious everyday
+          meals with confidence.
+        </p>
+      </article>
+
+
+      <article class="card">
+        <div class="icon">🥄</div>
+
+        <h3>Kitchen Utensils</h3>
+
+        <p>
+          Useful tools and utensils that make preparation,
+          cooking and serving easier.
+        </p>
+      </article>
+
+
+      <article class="card">
+        <div class="icon">🍽️</div>
+
+        <h3>Table & Dining</h3>
+
+        <p>
+          Kitchen and dining essentials that combine function
+          with an attractive finish.
+        </p>
+      </article>
+
+
+      <article class="card">
+        <div class="icon">🫙</div>
+
+        <h3>Storage Essentials</h3>
+
+        <p>
+          Convenient solutions for keeping ingredients and
+          kitchen items organized.
+        </p>
+      </article>
+
+
+      <article class="card">
+        <div class="icon">☕</div>
+
+        <h3>Home Essentials</h3>
+
+        <p>
+          Selected household items designed to add convenience
+          to your daily routine.
+        </p>
+      </article>
+
+
+      <article class="card">
+        <div class="icon">✨</div>
+
+        <h3>Quality Picks</h3>
+
+        <p>
+          Carefully selected kitchenware for customers who value
+          practicality and style.
+        </p>
+      </article>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- ABOUT -->
+<section class="about" id="about">
+
+  <div class="container about-grid">
+
+    <div class="about-box">
+
+      <div class="big">
+        MS
+      </div>
+
+      <p style="margin-top:18px;color:#d9d0c4">
+        KITCHEN WARES LTD
+      </p>
+
+    </div>
+
+
+    <div class="about-text">
+
+      <h2>
+        Made for the heart of the home.
+      </h2>
+
+      <p>
+        At MS KITCHEN WARES LTD, we focus on kitchenware and
+        household essentials that make everyday living more
+        convenient, organized and enjoyable.
+      </p>
+
+      <p>
+        Whether you are setting up a new kitchen, upgrading
+        your essentials or looking for useful items for the
+        home, our collection is built around practicality
+        and style.
+      </p>
+
+
+      <div class="features">
+
+        <div class="feature">
+          ✓ Practical everyday products
+        </div>
+
+        <div class="feature">
+          ✓ Stylish kitchen essentials
+        </div>
+
+        <div class="feature">
+          ✓ Home-focused selection
+        </div>
+
+        <div class="feature">
+          ✓ Customer-focused service
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- CONTACT -->
+<section id="contact" class="cta">
+
+  <div class="container">
+
+    <h2>
+      Looking for kitchen essentials?
+    </h2>
+
+    <p>
+      Get in touch with MS KITCHEN WARES LTD for product
+      enquiries and more information about our kitchenware
+      collection.
+    </p>
+
+    <a
+      class="btn"
+      href="mailto:mskitchenwares54@gmail.com"
+    >
+      Email MS KITCHEN WARES LTD
+    </a>
+
+  </div>
+
+</section>
+
+</main>
+
+
+<!-- FOOTER -->
+<footer>
+
+  <div class="footer-inner">
+
+    <div>
+      <strong>MS KITCHEN WARES LTD</strong>
+      <br>
+      <small>Kitchen & Home Essentials</small>
+    </div>
+
+    <a
+      class="email"
+      href="mailto:mskitchenwares54@gmail.com"
+    >
+      mskitchenwares54@gmail.com
+    </a>
+
+    <small>
+      © 2026 MS KITCHEN WARES LTD. All rights reserved.
+    </small>
+
+  </div>
+
+</footer>
+
+</body>
+</html>
